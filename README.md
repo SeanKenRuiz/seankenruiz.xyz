@@ -1,2 +1,0 @@
-# seankenruiz.xyz
-My website
