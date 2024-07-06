@@ -1,8 +1,8 @@
 body {
-  background-color: lightblue;
+  background-color: #EDECED;
 }
 
-h1 {
+h1, p {
   color: navy;
   margin-left: 20px;
 }
