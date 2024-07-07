@@ -3,6 +3,7 @@
 <head>
   
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sean Ken Ruiz</title>
 
   <link rel="stylesheet" href="mystyle.css">
@@ -14,19 +15,32 @@
 
 <body>
   <div class="container">
-    <h1 class="header">SEAN KEN RUIZ</h1>
+    <div class="header">
+      <h1>SEAN KEN RUIZ</h1>
+      <h4 class="subheading">Electrical Engineering & Computer Science</h4>
+    </div>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 
-  <h4>Electrical Engineering & Computer Science</h4>
   <p>This is work in-progress, please feel free to check out <a href="https://www.linkedin.com/in/seankenruiz/">my LinkedIn</a> in the mean time</p>
 
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
