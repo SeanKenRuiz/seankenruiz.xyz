@@ -13,3 +13,10 @@ h1 {
 p {
   color: #000000;
 }
+
+.dm-sans-<body> {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
