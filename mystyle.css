@@ -1,9 +1,11 @@
 body {
   background-color: #EDECED;
+  color:#000000;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-right: 30px;
   margin-left: 30px;
+  font-family: DM-sans, sans-serif;
 }
 
 h1 {
@@ -14,9 +16,54 @@ p {
   color: #000000;
 }
 
-.dm-sans-<body> {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+/* Style the header */
+.header {
+  padding: 30px;
+  font-size: 60px;
+  font-family: Roboto;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 58px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
 }
