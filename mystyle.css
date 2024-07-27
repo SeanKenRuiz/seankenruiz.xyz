@@ -94,9 +94,10 @@ nav a {
   display: flex;
 }
 
-a.active, a.hover{
-  background: #000000;
-  transition: .5s;
+nav a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  transition: background-color 0.5s;
 }
 
 @media screen and (max-width: 728px) {
