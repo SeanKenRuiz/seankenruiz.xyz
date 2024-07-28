@@ -140,3 +140,12 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+.about-col1{
+  flex-basis: 35%;
+}
+
+.about-col1 img{
+  width: 100%;
+  border-radius: 15px;
+}
