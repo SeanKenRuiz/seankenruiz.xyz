@@ -162,3 +162,7 @@ nav a:hover {
   font-family: 'DM Sans', sans-serif;
   color: #000000;
 }
+
+table {
+  display: flex;
+}
