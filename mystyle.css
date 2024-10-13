@@ -3,11 +3,12 @@ body {
   background-color: #F4F4F4;
   color: #333;
   margin: 0;
-  padding: 0 20px; /* Padding added to the sides */
+  padding: 0 20px;
   font-family: 'DM Sans', sans-serif;
   line-height: 1.6;
 }
 
+/* Header */
 h1, h2, h3 {
   color: #333;
 }
@@ -73,7 +74,6 @@ footer {
   background-color: #333;
   color: white;
 }
-
 /* About Section */
 #about {
   padding: 80px 20px; /* Adjust padding for spacing */
@@ -119,23 +119,21 @@ footer {
   line-height: 1.6;
 }
 
+
 /* Portfolio Section */
 #portfolio {
-  padding: 50px 20px;
+  padding: 20px 15%;
 }
 
 .portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 30%)); /* Auto-fit columns */
+  gap: 16px; /* Gap between items */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .column2 {
-  flex: 0 1 calc(33.33% - 16px);
-  max-width: calc(33.33% - 16px);
-  margin: 8px;
-  box-sizing: border-box;
   display: none; /* Hide all columns by default */
 }
 
@@ -144,32 +142,18 @@ footer {
 }
 
 .column2 img {
-  width: 100%;
+  width: 60%;
+  height: auto; /* Ensure proper scaling */
+  object-fit: cover; /* Crop the image if needed */
   border-radius: 15px;
 }
 
 .content {
   background-color: #fff;
-  padding: 16px;
+  padding: 8px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
-/* Responsive layout for medium screens (2 columns) */
-@media screen and (max-width: 900px) {
-  .column2 {
-    flex: 0 1 calc(50% - 16px);
-    max-width: calc(50% - 16px);
-  }
-}
-
-/* Responsive layout for small screens (1 column) */
-@media screen and (max-width: 600px) {
-  .column2 {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
 }
 
 /* Button Styles */
@@ -189,41 +173,17 @@ footer {
   background-color: #ddd;
 }
 
-
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  .hamburger {
-    display: block;
+/* Responsive layout */
+@media screen and (max-width: 900px) {
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30%); /* On medium screens */
   }
+}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 20px;
-    position: absolute;
-    right: 0;
-    top: 70px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-col1, .about-col2 {
-    flex: none;
-    width: 100%;
-  }
-
-  .about-col2 {
-    padding-left: 0;
+@media screen and (max-width: 600px) {
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* On small screens */
   }
 }
