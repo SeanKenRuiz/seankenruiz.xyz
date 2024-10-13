@@ -3,6 +3,7 @@ body {
   background-color: #F4F4F4;
   color: #333;
   margin: 0;
+  padding: 0 20px; /* Padding added to the sides */
   font-family: 'DM Sans', sans-serif;
   line-height: 1.6;
 }
@@ -58,7 +59,7 @@ header {
 }
 
 .intro {
-  padding: 50px;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -75,7 +76,7 @@ footer {
 
 /* Portfolio Section */
 #portfolio {
-  padding: 50px 20px;
+  padding: 50px 0;
 }
 
 .portfolio-grid {
@@ -135,4 +136,63 @@ footer {
   .nav-links.active {
     display: flex;
   }
+
+  /* About Section */
+#about {
+  padding: 80px 20px; /* Adjust padding for spacing */
+  color: #000;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-col1 {
+  flex-basis: 35%; /* Set the width of the image column */
+}
+
+.about-col1 img {
+  width: 100%; /* Ensure the image scales responsively */
+  border-radius: 15px;
+}
+
+.about-col2 {
+  flex-basis: 60%; /* Set the width of the text column */
+  padding-left: 20px; /* Add space between the image and text */
+}
+
+.about-col2 h1 {
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+.about-col2 h3 {
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-col1, .about-col2 {
+    flex-basis: 100%;
+  }
+
+  .about-col2 {
+    padding-left: 0;
+  }
+}
+
 }
