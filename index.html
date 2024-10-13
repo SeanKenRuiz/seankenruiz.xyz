@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sean Ken Ruiz</title>
+  <meta name="description" content="Portfolio of Sean Ken Ruiz, showcasing projects in electrical engineering, computer science, and more.">
+  <title>SEAN KEN | Electrical Engineer & Developer</title>
 
   <link rel="stylesheet" href="mystyle.css">
   <link rel="icon" type="image/x-icon" href="/images/SKR.png">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=DM-Sans'/> 
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'/> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"/>
 
 </head>
 
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>SEAN KEN RUIZ</h1>
-      <h4 class="subheading">Electrical Engineering & Computer Science</h4>
-    </div>
+  <header class="header">
+    <h1>Sean Ken Ruiz</h1>
+    <h4 class="subheading">Electrical Engineering & Computer Science</h4>
     <nav>
       <div class="hamburger" onclick="toggleMenu()">
         <div></div>
@@ -31,65 +30,56 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </div>
+  </header>
 
-  <p>This is work in-progress, please feel free to check out <a href="https://www.linkedin.com/in/seankenruiz/">my LinkedIn</a> in the mean time</p>
+  <section class="intro">
+    <p>This website is a work in progress, but feel free to check out my <a href="https://www.linkedin.com/in/seankenruiz/">LinkedIn</a> for more details.</p>
+  </section>
 
   <!-- -------- about ------------ -->
-  <div id="about">
+  <section id="about">
     <div class="about-container">
       <div class="about-col1">
-        <img src="images/SKR.png" alt="Sean Ruiz">
+        <img src="images/SKR.png" alt="Sean Ken Ruiz, portrait" class="profile-pic">
       </div>
       <div class="about-col2">
-        <h1>About me</h1>
-        <h3>I'm Sean Ruiz, a Computer Engineering major at Skyline College. I've always had an interest in robotics, and have gained exposure to electronics, computer science, and 3D printing throughout my projects.</h3>
+        <h1>About Me</h1>
+        <h3>I'm Sean Ruiz, a Computer Engineering major at Skyline College. My interests lie in robotics, electronics, computer science, and 3D printing. Through my projects, I've explored diverse technologies and innovations.</h3>
       </div>
     </div>
-  </div>
+  </section>
   
-<h2 id="portfolio">PORTFOLIO</h2>
-<div>
-  
-<!-- Portfolio Gallery Grid -->
-  <div class="row">
-    <div class="column2">
-      <div class="content">
-        <img src="images/SKR.png" alt="Sean Ruiz" style="width:100%">
+  <!-- -------- Portfolio ------------ -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/SKR.png" alt="Quadcopter Drone project" class="portfolio-image">
         <h3>Quadcopter Drone</h3>
-        <p>January 2024, July 2024 - Present</p>
+        <p>January 2024 - Present</p>
       </div>
-    </div>
-    <div class="column2">
-      <div class="content">
-        <img src="images/SKR.png" alt="Sean Ruiz" style="width:100%">
+      <div class="portfolio-item">
+        <img src="images/SKR.png" alt="Cosmic Muon Detector project" class="portfolio-image">
         <h3>Cosmic Muon Detector</h3>
         <p>November 2023 - April 2024</p>
       </div>
-    </div>
-    <div class="column2">
-      <div class="content">
-        <img src="images/SKR.png" alt="Sean Ruiz" style="width:100%">
+      <div class="portfolio-item">
+        <img src="images/SKR.png" alt="Solar Boat project" class="portfolio-image">
         <h3>Solar Boat</h3>
         <p>October 2022 - April 2024</p>
       </div>
-    </div>
-    <div class="column2">
-      <div class="content">
-        <img src="images/SKR.png" alt="Sean Ruiz" style="width:100%">
-        <h3>My Work</h3>
-        <p>Lorem ipsum..</p>
+      <div class="portfolio-item">
+        <img src="images/SKR.png" alt="Other project" class="portfolio-image">
+        <h3>Other Projects</h3>
+        <p>Lorem ipsum...</p>
       </div>
     </div>
-  </div>
-  
-  <div class="content">
-    <img src="images/SKR.png" alt="Sean Ruiz" style="width:100%">
-    <h3>Some Other Work</h3>
-    <p>Lorem ipsum..</p>
-  </div>
-</div>
-  
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Sean Ken Ruiz | <a href="mailto:seankenruiz@example.com">Contact Me</a></p>
+  </footer>
+
   <script>
     function toggleMenu() {
       const navLinks = document.querySelector('.nav-links');

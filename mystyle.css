@@ -1,200 +1,138 @@
+/* General Styles */
 body {
-  background-color: #EDECED;
-  color: #000000;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  margin-left: 30px;
+  background-color: #F4F4F4;
+  color: #333;
+  margin: 0;
   font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
 }
 
-h1 {
-  color: #000000;
+h1, h2, h3 {
+  color: #333;
 }
 
-p {
-  color: #000000;
+a {
+  color: #007BFF;
+  text-decoration: none;
 }
 
-/* Style the header */
-.header {
-  padding: 0px;
-  font-size: 40px;
-  font-family: 'Roboto', sans-serif;
+a:hover {
+  text-decoration: underline;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.container {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 50;
-  padding: 0 10px;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  margin: 0px;
-}
-
-nav ul {
-  list-style-type: none;
+.header h1 {
   margin: 0;
-  padding: 0;
-  display: flex;
-  margin-top: 30px;
-}
-
-nav li {
-  margin-left: 58px;
-}
-
-nav a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-nav a:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-  transition: background-color 0.5s;
-}
-
-.subheading {
-  margin: 0px 10px 10px 0px;
-  font-size: 20px;
-  width: 50%;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 10px;
-  margin: 20px;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  margin: 4px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-links {
   display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-@media screen and (max-width: 728px) {
+.nav-links a {
+  color: #333;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+}
+
+.intro {
+  padding: 50px;
+  text-align: center;
+}
+
+.intro a {
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Portfolio Section */
+#portfolio {
+  padding: 50px 20px;
+}
+
+.portfolio-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  flex-basis: calc(25% - 40px);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-item {
+    flex-basis: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
   .nav-links.active {
     display: flex;
-  }
-  .hamburger {
-    display: flex;
-  }
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  nav li {
-    margin-left: 0;
-    text-align: center;
-    padding: 10px 0;
-  }
-}
-
-/* ---------- about ----------- */
-#about {
-  padding: 80px 0;
-  color: #000000;
-}
-
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.about-col1 {
-  flex-basis: 35%;
-}
-
-.about-col1 img {
-  height: 50%;
-  width: 50%;
-  border-radius: 15px;
-}
-
-.about-col2 {
-  flex-basis: 60%;
-}
-
-.about-col2 h1 {
-  font-size: 30px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.about-col2 h3 {
-  font-size: 18px;
-  font-family: 'DM Sans', sans-serif;
-  color: #000000;
-}
-
-table {
-  display: flex;
-}
-
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column2 {
-  float: left;
-  width: 25%;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column2 {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column2 {
-    width: 100%;
   }
 }
