@@ -4,19 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio of Sean Ken Ruiz, showcasing projects in electrical engineering, computer science, and more.">
-  <title>SEAN KEN | Electrical Engineer & Developer</title>
+  <title>Sean Ken Ruiz | Computer Engineering | Specializing in Robotics and Automation</title>
 
   <link rel="stylesheet" href="mystyle.css">
   <link rel="icon" type="image/x-icon" href="/images/SKR.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"/>
-
 </head>
 
 <body>
   <header class="header">
     <h1>Sean Ken Ruiz</h1>
-    <h4 class="subheading">Computer Engineer | Specializing in Robotics and Automation</h4>
+    <h4 class="subheading">Computer Engineering | Specializing in Robotics and Automation</h4>
     <nav>
       <div class="hamburger" onclick="toggleMenu()">
         <div></div>
@@ -36,7 +35,7 @@
     <p>This website is a work in progress, but feel free to check out my <a href="https://www.linkedin.com/in/seankenruiz/">LinkedIn</a> for more details.</p>
   </section>
 
-  <!-- -------- about ------------ -->
+  <!-- -------- About Me Section ------------ -->
   <section id="about">
     <div class="about-container">
       <div class="about-col1">
@@ -44,39 +43,74 @@
       </div>
       <div class="about-col2">
         <h1>About Me</h1>
-        <h3>I'm Sean Ruiz, a Computer Engineering major specializing in Robotics and Automation. My interests lie in robotics, electronics, computer science, and 3D printing. Through my projects, I've explored diverse technologies and innovations in the field of automation and robotics.</h3>
+        <p>I'm Sean Ruiz, a Computer Engineering major specializing in Robotics and Automation. My interests lie in robotics, electronics, computer science, and 3D printing. Through my projects, I've explored diverse technologies and innovations in the field of automation and robotics.</p>
       </div>
     </div>
   </section>
 
-  
-  <!-- -------- Portfolio ------------ -->
   <section id="portfolio">
     <h2>Portfolio</h2>
+  
+    <!-- Filter Buttons -->
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('experience')"> Experiences</button>
+      <button class="btn" onclick="filterSelection('projects')"> Projects</button>
+      <button class="btn" onclick="filterSelection('certifications')"> Certifications</button>
+    </div>
+  
+    <!-- Portfolio Grid -->
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="images/SKR.png" alt="Quadcopter Drone project" class="portfolio-image">
-        <h3>Quadcopter Drone</h3>
-        <p>January 2024 - Present</p>
+      <!-- Experience Items -->
+      <div class="column2 experience show">
+        <div class="content">
+          <img src="images/experience1.png" alt="Experience 1">
+          <h3>Software Engineer at XYZ Corp</h3>
+          <p>June 2020 - Present</p>
+        </div>
       </div>
-      <div class="portfolio-item">
-        <img src="images/SKR.png" alt="Cosmic Muon Detector project" class="portfolio-image">
-        <h3>Cosmic Muon Detector</h3>
-        <p>November 2023 - April 2024</p>
+      <div class="column2 experience show">
+        <div class="content">
+          <img src="images/experience2.png" alt="Experience 2">
+          <h3>Research Intern at ABC Lab</h3>
+          <p>January 2019 - May 2020</p>
+        </div>
       </div>
-      <div class="portfolio-item">
-        <img src="images/SKR.png" alt="Solar Boat project" class="portfolio-image">
-        <h3>Solar Boat</h3>
-        <p>October 2022 - April 2024</p>
+  
+      <!-- Project Items -->
+      <div class="column2 projects show">
+        <div class="content">
+          <img src="images/SKR.png" alt="Quadcopter Drone project">
+          <h3>Quadcopter Drone</h3>
+          <p>January 2024 - Present</p>
+        </div>
       </div>
-      <div class="portfolio-item">
-        <img src="images/SKR.png" alt="Other project" class="portfolio-image">
-        <h3>Other Projects</h3>
-        <p>Lorem ipsum...</p>
+      <div class="column2 projects show">
+        <div class="content">
+          <img src="images/SKR.png" alt="Solar Boat project">
+          <h3>Solar Boat</h3>
+          <p>October 2022 - April 2024</p>
+        </div>
+      </div>
+  
+      <!-- Certification Items -->
+      <div class="column2 certifications show">
+        <div class="content">
+          <img src="images/certification1.png" alt="Certification 1">
+          <h3>Certified Robotics Specialist</h3>
+          <p>Issued by Robotics Institute, March 2023</p>
+        </div>
+      </div>
+      <div class="column2 certifications show">
+        <div class="content">
+          <img src="images/certification2.png" alt="Certification 2">
+          <h3>Data Science Professional Certificate</h3>
+          <p>Issued by XYZ, July 2021</p>
+        </div>
       </div>
     </div>
   </section>
-
+  
   <footer>
     <p>&copy; 2024 Sean Ken Ruiz | <a href="mailto:seankenruiz@example.com">Contact Me</a></p>
   </footer>
@@ -87,5 +121,6 @@
       navLinks.classList.toggle('active');
     }
   </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

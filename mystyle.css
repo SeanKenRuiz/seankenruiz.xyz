@@ -119,46 +119,77 @@ footer {
   line-height: 1.6;
 }
 
-/* Reverted Portfolio Section */
-.row {
+/* Portfolio Section */
+#portfolio {
+  padding: 50px 20px;
+}
+
+.portfolio-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 -8px;
 }
 
 .column2 {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 8px;
+  flex: 0 1 calc(33.33% - 16px);
+  max-width: calc(33.33% - 16px);
+  margin: 8px;
+  box-sizing: border-box;
+  display: none; /* Hide all columns by default */
+}
+
+.show {
+  display: block; /* Show filtered columns */
 }
 
 .column2 img {
-  vertical-align: middle;
+  width: 100%;
   border-radius: 15px;
 }
 
 .content {
   background-color: #fff;
   padding: 16px;
-  margin-top: 8px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+/* Responsive layout for medium screens (2 columns) */
 @media screen and (max-width: 900px) {
   .column2 {
-    flex: 50%;
-    max-width: 50%;
+    flex: 0 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
   }
 }
 
+/* Responsive layout for small screens (1 column) */
 @media screen and (max-width: 600px) {
   .column2 {
-    flex: 100%;
+    flex: 0 1 100%;
     max-width: 100%;
   }
 }
+
+/* Button Styles */
+.btn {
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
